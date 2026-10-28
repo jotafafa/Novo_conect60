@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONECT60+ - Avaliação pós-atendimento</title>
+    <link rel="stylesheet" href="avaliacao.css">
+</head>
+<body>
+
+    <!-- Aba de Avaliação de Atendimento / Pacote -->
+    <div id="aba-avaliacao-pos-compra" class="aba-avaliacao-container">
+        
+        <!-- Cabeçalho -->
+        <header class="aba-header">
+            <div class="profissional-info">
+                <!-- Avatar SVG de fallback (evita imagem partida) -->
+                <div class="avatar-placeholder">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div>
+                    <span class="tag-status">Sessão / Pacote Finalizado</span>
+                    <h2 id="nome-profissional">Nome do Profissional</h2>
+                </div>
+            </div>
+            <button class="btn-fechar-aba" onclick="fecharAbaAvaliacao()" aria-label="Avaliar mais tarde">
+                ✕ Fechar
+            </button>
+        </header>
+
+        <!-- Pergunta e Botão de Leitura de Voz -->
+        <div class="aba-corpo">
+            <div class="pergunta-box">
+                <h3 id="texto-pergunta">Como foi a sua experiência com este fisioterapeuta?</h3>
+                <button class="btn-voz-aba" onclick="ouvirPerguntaAba()" aria-label="Ouvir pergunta em voz alta">
+                    <svg class="icon-btn-voz" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    </svg>
+                    <span>Ouvir</span>
+                </button>
+            </div>
+
+            <!-- As 4 Opções com Ícones Limitados -->
+            <div class="opcoes-avaliacao-grid">
+                
+                <button class="btn-nivel btn-nao-gostei" onclick="selecionarNivel('NAO_GOSTEI', 1, this)">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-3"></path>
+                    </svg>
+                    <span>Não gostei</span>
+                </button>
+
+                <button class="btn-nivel btn-neutro" onclick="selecionarNivel('NEUTRO', 2, this)">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="8" y1="15" x2="16" y2="15"></line>
+                    </svg>
+                    <span>Neutro</span>
+                </button>
+
+                <button class="btn-nivel btn-gostei" onclick="selecionarNivel('GOSTEI', 3, this)">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path>
+                    </svg>
+                    <span>Gostei</span>
+                </button>
+
+                <button class="btn-nivel btn-otimo" onclick="selecionarNivel('OTIMO', 4, this)">
+                    <svg class="icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    <span>Ótimo</span>
+                </button>
+
+            </div>
+
+            <!-- Tags Dinâmicas de Clique Único -->
+            <div id="box-motivos-rapidos" class="box-motivos hidden">
+                <h4>Escolha uma observação (opcional):</h4>
+                <div id="lista-tags-dinamicas" class="tags-flex"></div>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="aba-footer">
+            <button id="btn-confirmar-avaliacao" class="btn-enviar-final" onclick="submeterAvaliacaoAba()" disabled>
+                SALVAR AVALIAÇÃO
+            </button>
+            <button class="btn-pular" onclick="fecharAbaAvaliacao()">Responder depois</button>
+        </footer>
+
+    </div>
+
+    <script src="avaliacao.js"></script>
+</body>
+</html>

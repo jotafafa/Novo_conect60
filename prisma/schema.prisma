@@ -1,0 +1,28 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum ClassificacaoAvaliacao {
+  NAO_GOSTEI
+  NEUTRO
+  GOSTEI
+  OTIMO
+}
+
+model Avaliacao {
+  id              Int                    @id @default(autoincrement())
+  atendimento_id  Int
+  idoso_id        Int
+  profissional_id Int
+  classificacao   ClassificacaoAvaliacao
+  nota_numerica   Int
+  tag_motivo      String?
+  criado_em       DateTime               @default(now())
+
+  @@map("avaliacoes")
+}

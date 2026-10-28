@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Martel Sans", sans-serif;
+}
+ 
+body {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
+ 
+/* ══════════════════════════════
+   HEADER
+══════════════════════════════ */
+header {
+    background-color: #ffffff;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    width: 100%;
+}
+ 
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ALTERADO: Empurra a logo para a esquerda e o ícone para a direita */
+    width: 100%;
+}
+ 
+.logo {
+    font-family: "Train One", system-ui;
+    font-size: 40px;
+    color: #01a1b3;
+    letter-spacing: 1px;
+}
+
+/* NOVO: Organiza o tamanho, cor, cursor e efeito de hover do ícone */
+.bi-person-circle {
+    color: #01a1b3;
+    font-size: 35px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.bi-person-circle:hover {
+    color: #18a6b8;
+    transform: scale(1.05);
+}
+ 
+/* ══════════════════════════════
+   BANNER (Imagem inicial aumentada)
+══════════════════════════════ */
+.banner {
+    width: 100%;
+    height: 650px; 
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+ 
+.banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;         
+    object-position: center 25%; 
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;         
+    object-position: center center; /* Altera de 25% para center, centralizando totalmente a foto */
+}
+ 
+/* ══════════════════════════════
+   MAIN
+══════════════════════════════ */
+main {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 40px;
+}
+ 
+/* ══════════════════════════════
+   LETRA DAS SEÇÕES
+══════════════════════════════ */
+.section-label {
+    display: inline-block;
+    background-color: #18a6b8;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 28px; 
+    padding: 12px 35px;
+    border-radius: 12px;
+    margin: 35px 0 22px 18px;
+}
+
+.separar{
+    margin-top: 40px;
+}
+
+/* ══════════════════════════════
+   AULAS
+══════════════════════════════ */
+.aulas-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;   
+    gap: 20px;
+    padding: 0 18px;
+    width: 100%;
+}
+ 
+.video-card {
+    flex: 1;                   
+    min-width: 22%; 
+    aspect-ratio: 16 / 9;      
+    background-color: #000000;
+    border-radius: 16px;
+    border: 3px solid #18a6b8;
+    display: flex;
+    align-items: center;       
+    justify-content: center;   
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+ 
+.video-card:hover {
+    transform: scale(1.02);
+}
+ 
+.play-btn {
+    width: 58px;
+    height: 58px;
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+ 
+.video-card:hover .play-btn {
+    transform: scale(1.12);
+}
+ 
+.play-btn i {
+    font-size: 32px;
+    color: #18a6b8;
+    margin-left: 5px;
+}
+
+/* ══════════════════════════════
+   FOOTER (Em linha horizontal)
+══════════════════════════════ */
+.rodape{
+    display: flex;
+    flex-direction: row;
+    background-color: #18a6b8;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    gap: 50px;
+}
+
+.logo-rodape{
+    font-family: "Train One", system-ui;
+    font-weight: 400px;
+    font-size: 60px;
+    font-style: normal;
+    color: white;
+    margin-right: 300px;
+}
+
+.rodape-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.info-rodape{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icon-rodape{
+    font-size: 25px;
+    color: white;
+}
+
+.info-rodape h1{
+    font-size: 25px;
+    color: white;
+}
+
+.info2-rodape{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 8px;
+    margin-left: 30px;
+}
+
+.link-rodape a{
+    color: white;
+    font-size: 16px;
+}

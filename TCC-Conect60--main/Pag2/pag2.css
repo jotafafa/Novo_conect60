@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    font-family: "Martel Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Linha do Topo / Header */
+.topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+}
+
+.logo {
+    font-family: "Train One", system-ui;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    color: #01a1b3;
+}
+
+/* Aba de Entrar no topo - Cor padrão #01a1b3 */
+.aba-entrar-topo {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    border: 2px solid #01a1b3;
+    padding: 8px 24px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-color: #01a1b3;
+    cursor: pointer;
+}
+
+/* Efeito Hover - Fica branco com texto azul */
+.aba-entrar-topo:hover {
+    background-color: #ffffff;
+    color: #01a1b3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(1, 161, 179, 0.2);
+}
+
+/* Otimização da imagem inicial */
+.imagem-fisio {
+    width: 100%;
+    height: 800px;
+    padding: 0px;
+    object-fit: cover;
+}
+
+.fundo1 {
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 450px;
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    border-radius: 30px;
+}
+
+/* Bloco do Cadastro Centralizado */
+.cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.cadastro h3 {
+    color: #01a1b3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.box-input {
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    border: 3px solid #01a1b3;
+    height: 50px;
+    width: 300px;
+    border-radius: 30px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.box-input .icon {
+    display: flex;
+    align-items: center;
+}
+
+.box-input i {
+    color: #01a1b3;
+    font-size: 15px;
+}
+
+.box-input .input-conteudo {
+    flex: 1;
+    display: flex;
+}
+
+/* Inputs arrastados para o canto esquerdo (borda do círculo) */
+.cadastro input {
+    background-color: transparent;
+    border: transparent;
+    height: 25px;
+    width: 100%;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 12px;
+}
+
+.cadastro input:focus {
+    outline: none;
+}
+
+/* Customização do input de arquivo (PDF) */
+input[type="file"] {
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer;
+    width: 100%;
+    height: 25px;
+    padding-left: 12px;
+    text-align: left;
+}
+
+input[type="file"]::file-selector-button {
+    display: none;
+}
+
+input::placeholder {
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+}
+
+/* Botão do formulário da página 2 */
+.cadastro .entrar {
+    color: #ffffff;
+    background-color: #01a1b3;
+    border-radius: 30px;
+    width: 300px;
+    height: 50px;
+    border: 3px solid transparent;
+    font-size: 22px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Efeito Hover do botão do formulário - Fica branco com texto azul */
+.cadastro .entrar:hover {
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 3px solid #01a1b3;
+    color: #01a1b3;
+    transform: scale(1.05);
+}
+
+.cadastro .opçao1 {
+    color: #4e4e4e;
+    background-color: transparent;
+    border: transparent;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.cadastro .opçao1:hover {
+    color: black;
+}
+
+.informaçoes {
+    display: flex;
+    flex-direction: row;
+    background-color: #18a6b8;
+    border-radius: 25px;
+    height: 500px;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+    margin-left: 45px;
+    gap: 70px;
+    margin-top: 140px; 
+    margin-bottom: 40px;
+}
+
+.informaçoes img {
+    height: 400px;
+    width: 500px;
+    border: 6px solid white;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.caixa-info {
+    height: auto;
+    width: 900px;
+    color: white;
+}
+
+/* Rodapé */
+.rodape{
+    display: flex;
+    flex-direction: row;
+    background-color: #18a6b8;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    gap: 50px;
+}
+
+.logo-rodape{
+    font-family: "Train One", system-ui;
+    font-weight: 400px;
+    font-size: 60px;
+    font-style: normal;
+    color: white;
+    margin-right: 300px;
+}
+
+.rodape-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-rodape{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.icon-rodape{
+    font-size: 25px;
+    color: white;
+}
+
+.info-rodape h1{
+    font-size: 25px;
+    color: white;
+}
+
+.info2-rodape{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    gap: 8px;
+    margin-left: 30px;
+}
+
+.link-rodape a{
+    color: white;
+    font-size: 16px;
+}
